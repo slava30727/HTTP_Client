@@ -4,4 +4,4 @@
 
 To get help with commands type "help" in console.
 
-
+Compiled with C++20.
