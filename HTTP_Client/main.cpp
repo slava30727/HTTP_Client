@@ -291,6 +291,14 @@ int main() {
 			end_of_getting_data = true;
 			break;
 		}
+		else if (command == "help") {
+			std::cout << "Possible commands: \n"
+						 "\thelp\n"
+						 "\tget data\n"
+						 "\tget data_anyway\n"
+						 "\tget response_count\n"
+						 "\texit\n";
+		}
 		else if (command == "get") {
 			std::cin >> command;
 			if (command == "data") {
@@ -301,7 +309,8 @@ int main() {
 					if (current != prev)
 						std::cout << current << std::endl;
 					else
-						std::cout << "Output> Same output (nothing changed).\n";
+						std::cout << "Output> Same output (nothing changed)."
+									 "Type \"get data_anyway\" to get data from queue.\n";
 
 					prev = current;
 				}
